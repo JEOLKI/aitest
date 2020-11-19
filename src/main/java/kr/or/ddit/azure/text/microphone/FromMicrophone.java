@@ -20,6 +20,7 @@ public class FromMicrophone {
 
             int exitCode = 1;
             SpeechConfig config = SpeechConfig.fromSubscription(speechSubscriptionKey, serviceRegion);
+            config.setSpeechRecognitionLanguage("ko-KR");
             assert(config != null);
 
             SpeechRecognizer reco = new SpeechRecognizer(config);

@@ -1,6 +1,17 @@
 package kr.or.ddit.azure.face;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.net.URI;
+import java.util.Arrays;
+
+import javax.imageio.ImageIO;
+import javax.imageio.stream.ImageInputStream;
+import javax.imageio.stream.ImageOutputStream;
+
+import org.apache.commons.codec.binary.Base64;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -30,8 +41,12 @@ public class FaceAnalysis {
 	private static final String subscriptionKey = "cae766a534074d6b89f02281da4e14cf";
     private static final String endpoint = "https://faceanalysis-jh.cognitiveservices.azure.com/";
 
+    //private static final String imageWithFaces ="D:\\images.jpg";
     private static final String imageWithFaces =
         "{\"url\":\"https://upload.wikimedia.org/wikipedia/commons/c/c3/RH_Louise_Lillian_Gish.jpg\"}";
+    
+
+    
     
     /*
       다음 코드로 main 메서드를 추가합니다.
@@ -66,6 +81,7 @@ public class FaceAnalysis {
             //System.out.println(5);
 
             // Request body.
+            System.out.println("imageWithFaces : "+ imageWithFaces);
             StringEntity reqEntity = new StringEntity(imageWithFaces);
             request.setEntity(reqEntity);
             //System.out.println("6" + reqEntity);
