@@ -9,11 +9,9 @@
 	<script src="capture.js">
 	</script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 
 
-
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 </head>
 <body>
 
@@ -25,7 +23,7 @@
 		This example demonstrates how to set up a media stream using your built-in webcam, fetch an image from that stream, and create a PNG using that image.
 	</p>
   <div class="camera">
-    <video id="video">Video stream not available.</video>
+    <video id="video" autoplay >Video stream not available.</video>
     <button id="startbutton">Take photo</button> 
   </div>
   <canvas id="canvas">

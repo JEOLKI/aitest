@@ -101,7 +101,7 @@ public class GetSentiment {
             Documents documents = new Documents ();
             documents.add ("1", "en", "I really enjoy the new XBox One S. It has a clean look, it has 4K/HDR resolution and it is affordable.");
             documents.add ("2", "es", "Este ha sido un dia terrible, llegué tarde al trabajo debido a un accidente automobilistico.");
-            documents.add ("3", "ko", "안녕하세요 부정적인 언어를 사용하지 않아서 행복했습니다.");
+            documents.add ("3", "ko", "이명호는 지각을 안했다");
 
             String response = getTheSentiment (documents);
             System.out.println (prettify (response));
